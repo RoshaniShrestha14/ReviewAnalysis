@@ -11,32 +11,41 @@
 } */
 
 .nav {
+  position: fixed;                  /* Stays at the top of the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;                    /* Ensures it's above other elements */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #1e1e2f, #2d2d4f);
+  background: rgba(30, 30, 47, 0.2); /* Transparent background */
+  backdrop-filter: blur(10px);      /* Glass blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   padding: 10px 40px;
-  width: 100%;                
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 60px;
-  box-sizing: border-box;       
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
 .site-title {
   display: flex;
   align-items: center;
-  font-size: 20px;
   font-weight: bold;
-  color: #fff;
+  font-size: 1.2rem;
+  color: #1e1e1e;
   text-decoration: none;
 }
 
-.site-title img {
+.site-title .logo {
   width: 32px;
   height: 32px;
-  margin-right: 10px;
+  margin-right: 8px;
+  border-radius: 8px;
 }
+
 
 .nav ul {
   list-style: none;

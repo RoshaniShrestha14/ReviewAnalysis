@@ -23,36 +23,50 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <div className="bg-[#0D0B1A] text-white py-16 px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4">How It Works</h2>
-      <p className="text-lg md:text-xl mb-12">
-        Analyzing reviews is simple with our three-step process.
-      </p>
+    <div
+      className="min-h-screen flex items-center justify-center px-6"
+      style={{
+        background:
+          // "linear-gradient(90deg, #DBEAFE 0%, #D6EFFA 31%, #D3F3F7 50%, #CCFBF1 100%)",
+          "linear-gradient(90deg, #CCFBF1 0%, #D3F3F7 41%, #D6EFFA 50%, #DBEAFE 100%)",
+        color: "#1E293B", // Slate-800 equivalent for text
+      }}
+    >
+      <div className="max-w-7xl w-full flex flex-col items-center justify-center gap-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-[#0E3F83] to-[#030E1D] bg-clip-text text-transparent mb-3">
+          How It works
+        </h2>
+        <p className="text-lg md:text-xl font-medium mb-12 max-w-3xl mx-auto">
+          Analyzing reviews is simple with our three-step process.
+        </p>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 max-w-6xl mx-auto">
-        {steps.map((step, index) => (
-          <React.Fragment key={index}>
-            <div className="flex flex-col items-center text-center md:text-left md:mx-6 max-w-[250px]">
-              {/* Circle number */}
-              <div className="bg-blue-600 text-white font-bold w-10 h-10 flex items-center justify-center rounded-full mb-3">
-                {step.number}
-              </div>
-              {/* Title */}
-              <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
-              {/* Description */}
-              <p className="text-sm text-gray-300">
-                {step.description}
-              </p>
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl mx-auto">
+          {steps.map((step, index) => (
+            <React.Fragment key={index}>
+              <div className="flex flex-col items-center text-center max-w-[250px]">
+                {/* Number Circle */}
+                <div className="bg-[#1E3A8A] text-white font-semibold w-12 h-12 flex items-center justify-center rounded-full text-lg mb-3">
+                  {step.number}
+                </div>
 
-            {/* Arrow - show only between steps on md+ */}
-            {index !== steps.length - 1 && (
-              <div className="hidden md:flex items-center justify-center text-3xl text-gray-500">
-                <span className="mx-4">→</span>
+                {/* Step Title */}
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+
+                {/* Description */}
+                <p className="text-sm text-gray-700">{step.description}</p>
               </div>
-            )}
-          </React.Fragment>
-        ))}
+
+              {/* Arrow between steps (desktop only) */}
+              {index !== steps.length - 1 && (
+                <div className="hidden md:flex flex-col justify-center items-center px-6">
+                  <span className="text-5xl font-extrabold text-[#0E3F83]">
+                    →
+                  </span>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );

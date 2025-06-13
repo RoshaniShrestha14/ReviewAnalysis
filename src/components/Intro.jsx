@@ -4,74 +4,59 @@ import { motion } from "framer-motion";
 const ReviewCheckerLanding = () => {
   return (
     <div
+      className="min-h-screen flex items-center justify-center px-6"
       style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        paddingLeft: "1.5rem",
-        paddingRight: "1.5rem",
         background:
-          "linear-gradient(126deg, rgba(30, 30, 30, 1) 35%, rgba(250, 99, 255, 1) 77%, rgba(191, 149, 51, 1) 100%)",
+          "linear-gradient(90deg, #F0FDFA 0%, #E6FFFA 50%, #CCFBF1 100%)",
       }}
     >
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10 pl-20 -mt-35">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left Section */}
-        <div className="text-white max-w-xl">
-          <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-            <span className="bg-gradient-to-r from-[#A5EAF4] to-[#F674FF] bg-clip-text text-transparent">
-              Check if a review is real or fake with AI
-            </span>
+        <div className="max-w-xl">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug mb-4 font-black">
+            Check if a review is{" "}
+            <span className="bg-gradient-to-r from-teal-700 to-teal-400 bg-clip-text text-transparent font-black">
+              real or fake
+            </span>{" "}
+            with AI
           </h1>
-          <p className="mb-6 text-gray-300">
+          <p className="text-gray-700 mb-6 text-lg">
             Identify authentic product reviews with our powerful AI sentiment
             analysis. Get accurate insights and make informed purchase
             decisions.
           </p>
-          <div className="flex gap-12">
+          <div className="flex gap-4">
             <button
+              className="text-white font-medium py-2.5 px-6 rounded-lg shadow-md"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2))",
-                borderRadius: "20px",
-                padding: "8px 16px",
-                color: "#fff",
-                fontWeight: 500,
-                backdropFilter: "blur(6px)",
-                boxShadow: "0 2px 6px rgba(255, 255, 255, 0.2)",
+                background: "linear-gradient(90deg, #14B8A6, #14B8A6)",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.15)",
               }}
             >
-              Paste a Review
+              Try review analyzer
             </button>
-
             <button
+              className="text-black font-medium py-2.5 px-6 rounded-lg shadow-md"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2))",
-                borderRadius: "20px",
-                padding: "8px 16px",
-                color: "#fff",
-                fontWeight: 500,
-                backdropFilter: "blur(6px)",
-                boxShadow: "0 2px 6px rgba(255, 255, 255, 0.2)",
+                backgroundColor: "#FDE047",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.15)",
               }}
             >
-              View Dashboard
+              Learn more
             </button>
           </div>
         </div>
 
-        {/* Right Section - Illustration */}
+        {/* Right Section - Image */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative"
+          transition={{ duration: 0.8 }}
         >
           <img
-            src="/illustration-review.png"
-            alt="Review illustration"
-            className="w-[450px] max-w-full"
+            src="/Intro.png"
+            alt="Review Analysis Illustration"
+            className="w-[480px] max-w-full"
           />
         </motion.div>
       </div>

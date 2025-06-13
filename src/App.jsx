@@ -1,10 +1,10 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Intro from './components/Intro'
-import KeyFeatures from './components/KeyFeatures'
-import HowItWorks from './components/HowItWorks'
-import ReminderAnalyze from './components/ReminderAnalyze'
-
+import "@fontsource/inter"; // Defaults to 400 weight
+import React from "react";
+import Navbar from "./components/Navbar";
+import Intro from "./components/Intro";
+import KeyFeatures from "./components/KeyFeatures";
+import HowItWorks from "./components/HowItWorks";
+import ReminderAnalyze from "./components/ReminderAnalyze";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <HowItWorks></HowItWorks>
       <ReminderAnalyze></ReminderAnalyze>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
