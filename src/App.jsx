@@ -7,6 +7,8 @@ import HowItWorks from "./components/HowItWorks";
 import ReminderAnalyze from "./components/ReminderAnalyze";
 import AboutUs from "./components/AboutUs";
 import AboutUsMission from "./components/AboutUSMission";
+import AboutUsTeam from "./components/AboutUsTeam";
+import ReviewAnalyzer from "./components/ReviewAnalyzer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <ReminderAnalyze></ReminderAnalyze>
       <AboutUs></AboutUs>
       <AboutUsMission></AboutUsMission>
+      <AboutUsTeam></AboutUsTeam>
+      <ReviewAnalyzer></ReviewAnalyzer>
     </div>
   );
 }
